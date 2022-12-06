@@ -6,9 +6,14 @@
       <h3>Your account:</h3>
       <router-link to="/account">Account</router-link>
     </div>
-    <NewTask />
+    <NewTask @getTasksHijo="getTasks"/>
+    
+    
     <h1>Tasks:</h1>
-    <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
+    <TaskItem v-for="task in tasks" :key="task.id" :task="task"  @deleteTasksHijo="getTasks" @editTasksHijo="getTasks" />
+
+    
+  
   </div>
 </template>
 
@@ -30,7 +35,11 @@ const getTasks = async() => {
   tasks.value = await taskStore.fetchTasks();
 };
 
+// Tiene que entrar en la función de la store task.js y despues llamar a getTasks
+
 getTasks();
+
+
 
 </script>
 

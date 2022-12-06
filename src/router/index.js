@@ -5,9 +5,9 @@ import Account from "../views/Account.vue"
 import SignIn from "../components/SignIn.vue";
 import SignUp from "../components/SignUp.vue";
 
-const routes = [
+const routes = [ // En las rutas siempre debe aparecer SIEMPRE como minimo path: y component:
   {
-    path: "/auth",
+    path: "/auth", // path = URL
     component: Auth,
     children: [
       { path: "login", component: SignIn },
@@ -18,9 +18,9 @@ const routes = [
   { path: "/account", component: Account }
 ];
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
+const router = createRouter({ // crear router
+  history: createWebHistory(), //historial del router
+  routes, // Declarar la const creada donde aparecen todos las rutas.
 });
 
-export default router;
+export default router; // exportar el router por el metdo default
