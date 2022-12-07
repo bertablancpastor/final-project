@@ -56,6 +56,8 @@ Para este proyecto vamos a desarrollar una aplicación ToDo (para hacer un segui
 * Hacer el fetch de las tareas de Supabase al cargar la pagina y cada vez que se ejecute alguna accion de cambio
 
 ### 08/12/2022:
+* EMPEZAR POR EL BUTTON DE ADD de NewTask.vue Componente!!!!
+
 * Preparar la tienda task.js para poder conectar los botones con la base de datos
 * Añadir funcionalidad al boton toggle que permite cambiar el estado de la tarea
 * Añadir funcionalidad al boton de cambiar el nombre que permite al usuario cambiar el titulo de la tarea

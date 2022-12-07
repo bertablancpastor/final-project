@@ -1,30 +1,37 @@
 <template>
   <nav>
     <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <router-link to="/">
+    <!-- <router-link to="/">
       Home
-    </router-link>
-
+    </router-link> -->
     <ul>
         <li>
-          <router-link to="/">Task Manager</router-link>
+          <router-link to="/" class="router-link">Task Manager</router-link>
         </li>
 
         <li>
-          <router-link to="/account">Your Account</router-link>
+          <router-link to="/account" class="router-link">Your Account</router-link>
         </li>
     </ul>
 
     <div>
       <ul>
+        <!-- Aplicar como aplicar el usuario logeado -->
         <li class="log-out-welcome">
-          <p>Welcome, user</p>
+          <p v-if="useUserStore().user">Welcome {{useUserStore().user.email}}</p>
         </li>
         <li>
           <button @click="signOut" class="button">Log out</button>
         </li>
       </ul>
     </div>
+
+    <!-- <div class = "hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div> -->
+
   </nav>
 </template>
 
@@ -71,23 +78,9 @@ const signOut = async () => {
 </script>
 
 <style>
-.navbar-img {
-  width: 90px;
-}
+/* .navbar-img {
+  width: 190px;
+} */
 
-nav {
-  background-color: lightgray;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-}
 
-nav ul {
-  list-style: none;
-  padding-inline-start: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 </style>

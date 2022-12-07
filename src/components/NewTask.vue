@@ -1,17 +1,21 @@
 <template>
-    <h1>Add a new Task</h1>
+<div class="new-task">
+
+    <h1 class="title-new-task">Add a new Task</h1>
     <div v-if="showErrorMessage">
         <p class="error-text">{{ errorMessage }}</p>
     </div>
     <div>
-        <div class="input-field">
-            <input type="text" placeholder="Add a Task Title - Listen to Kendrick Lamar" v-model="name">
+        <div class="input-field-new-task">
+            <input type="text" placeholder="Add a Task Title..." class="input-field-new-task" v-model="name">
         </div>
-        <div class="input-field">
-            <input type="text" placeholder="Add a Task Description - Look up Kendrick Lamar's FEAR album on spotify and listen to the whole album." v-model="description">
+        <div class="input-field-new-task">
+            <input type="text" placeholder="Add a Task Description..." class="input-field-new-task" v-model="description">
         </div>
-        <button @click="addTask" class=“button”>Add</button>
+        <button class=“button-new-task” @click="addTask" >Add</button>
     </div>
+
+</div>
 </template>
 
 <script setup>

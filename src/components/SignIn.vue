@@ -1,17 +1,21 @@
 <!-- COMPONENTE BOILERPLATE -->
  
-  <template>
-
-  <div class="container-sign-in">
-    <div>
+<template>
+<div class="container-sign">
+    <!-- <div>
     <img src="https://img.freepik.com/foto-gratis/cerrar-mano-escribiendo-vista-superior-cuaderno_23-2148888824.jpg?w=996&t=st=1670258256~exp=1670258856~hmac=0ad8d76181e42c10b64ce2d0f461475aac684640d93513edae8049c3b69a937f" class="img-sign-in" alt="image">
+    </div> -->
+  
+  <div class="form-side">
+    <div class="header-description">
+      <h3 class="header-title">Log In to ToDo App</h3>
+      <p class="header-subtitle">Start organizing your tasks!</p>
     </div>
-    <div class="box">
-    <h3 class="header-title">Log In to ToDo App</h3>
 
+    
     <form @submit.prevent="signIn" class="form-sign-in">
       <div class="form">
-        <div class="form-input">
+        <div class="form-input-sign-in">
           <label class="input-field-label">E-mail</label>
           <input
             type="email"
@@ -32,19 +36,21 @@
             v-model="password"
             required
           />
-        </div>
+         </div>
 
         <button class="button" type="submit">Sign In</button> 
       </div> 
-      
+
+      <div>
+         <p class="create-account">Dont have an account? 
+          <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
+      </div>
     </form>
-    </div>
-
-    <p>Dont have an account? 
     
-    <PersonalRouter :route="route" :buttonText="buttonText" class="sign-up-link"/></p>
+    
+    
   </div>
-
+</div>
 </template>
 
 <script setup>

@@ -1,6 +1,8 @@
 <template>
   
-  <div class="container">
+  <div class="container-sign">
+
+  <div class="form-side">
 
     <div class="header">
       <div class="header-description">
@@ -10,7 +12,7 @@
     </div>
 
     <form @submit.prevent="signUp" class="form-sign-in">
-      <div class="form">
+      <div class="form-side">
         <div class="form-input">
           <label class="input-field-label">E-mail</label>
           <input
@@ -45,7 +47,7 @@
           />
         </div>
         <button class="button" type="submit">Sign Up</button>
-        <p>
+        <p class="create-account">
           Have an account?
           <PersonalRouter
             :route="route"
@@ -57,7 +59,9 @@
     </form>
 
     <div v-show="errorMsg">{{errorMsg}}</div>
+
   </div>
+</div>
 </template>
 
 <script setup>

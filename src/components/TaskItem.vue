@@ -1,18 +1,19 @@
 <template>
 <div class="container">
-    <h3>{{task.title}}</h3>
-    <p>{{task.description}}</p>
+    <h3 v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{task.title}}</h3>
+    <p v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{task.description}}</p>
+
     <button @click="deleteTask">Delete {{task.title}}</button>
     <button @click="editTaskFunction">Edit {{task.title}}</button>
-    <button @click="archiveTaskFunction">Store{{task.title}}</button>
+      
     <div v-show="editTask">
       <input type="text" placeholder="Edit Title" v-model="name" />
       <input type="text" placeholder="Edit Description" v-model="description">
       <button @click="changeTask">Edit</button>
     </div>
-    <div v-show="storeTask">
-        <button @click="statusTask">Store</button>     
-    </div>
+
+    <button @click="statusTask">Complete</button>
+    
 </div>
 </template>
 
@@ -23,7 +24,7 @@ import { supabase } from '../supabase';
 
 const taskStore = useTaskStore();
 
-const emit = defineEmits(['deleteTasksHijo', 'editTasksHijo', 'archiveTasksHijo']);
+const emit = defineEmits(['getTasksHijo']);
 
 // variables para los valors de los inputs
 const name = ref('');
@@ -37,7 +38,7 @@ const props = defineProps({
 const deleteTask = async() => {
     await taskStore.deleteTask(props.task.id);
 
-    emit ('deleteTasksHijo');
+    emit ('getTasksHijo');
 };
 
 // Funcion editar task
@@ -45,7 +46,7 @@ const changeTask = async () => {
     await taskStore.changeTask(name.value, description.value, props.task.id);
     editTask.value = false;
     
-    emit ('editTasksHijo');
+    emit ('getTasksHijo');
 };
 
 const editTask = ref(false);
@@ -54,22 +55,30 @@ const editTaskFunction = () => {
 };
 
 // Funcion archivar task
+
 const statusTask = async () => {
-    await taskStore.statusTask(is_complete.value, props.task.id);
-    archiveTask.value = false;
-
-    emit ('archiveTaskHijo')
+    await taskStore.statusTask(!props.task.is_complete, props.task.id);
+    emit ('getTasksHijo');
+    console.log("El registro del booleano es "+props.task.is_complete)
 };
 
-const archiveTask = ref (false)
-const archiveTaskFunction = () => {
-    archiveTask.value = !archiveTask.value   
-};
 
 
 </script>
 
-<style></style>
+<style scoped>
+
+
+.completed {
+    text-decoration: line-through;
+    color: green;
+}
+
+.not-completed {
+    color: blue;
+}
+
+</style>
 
 <!--
 **Hints**
