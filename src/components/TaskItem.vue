@@ -1,20 +1,26 @@
 <template>
-<div class="container">
-    <h3 v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{task.title}}</h3>
-    <p v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{task.description}}</p>
 
-    <button @click="deleteTask">Delete {{task.title}}</button>
-    <button @click="editTaskFunction">Edit {{task.title}}</button>
-      
-    <div v-show="editTask">
-      <input type="text" placeholder="Edit Title" v-model="name" />
-      <input type="text" placeholder="Edit Description" v-model="description">
-      <button @click="changeTask">Edit</button>
+
+    <div class="task-item">
+       <h3 v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{task.title}}</h3>
+       <p v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{task.description}}</p>
+    
+     <div class="buttons-task-item">
+       <button @click="deleteTask" class="buttons-1"></button>
+       <button @click="editTaskFunction" class="buttons-2"></button>   
+       <button @click="statusTask" class="buttons-3"></button>
+     </div>
+
+     <div v-show="editTask" class="edit-task">
+           <input class="input-edit" type="text" placeholder="Edit Title" v-model="name" />
+           <input class="input-edit" type="text" placeholder="Edit Description" v-model="description">
+               
+           <button @click="changeTask" class="button-change">Change</button>
+     </div>
+
     </div>
 
-    <button @click="statusTask">Complete</button>
-    
-</div>
+
 </template>
 
 <script setup>
@@ -68,15 +74,6 @@ const statusTask = async () => {
 
 <style scoped>
 
-
-.completed {
-    text-decoration: line-through;
-    color: green;
-}
-
-.not-completed {
-    color: blue;
-}
 
 </style>
 

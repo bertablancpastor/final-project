@@ -5,14 +5,14 @@
     <div v-if="showErrorMessage">
         <p class="error-text">{{ errorMessage }}</p>
     </div>
-    <div>
+    <div class="new-task-fields">
         <div class="input-field-new-task">
             <input type="text" placeholder="Add a Task Title..." class="input-field-new-task" v-model="name">
         </div>
         <div class="input-field-new-task">
             <input type="text" placeholder="Add a Task Description..." class="input-field-new-task" v-model="description">
         </div>
-        <button class=“button-new-task” @click="addTask" >Add</button>
+        <button class="button-add-task" @click="addTask" >Add</button>
     </div>
 
 </div>
@@ -41,7 +41,7 @@ if(name.value.length === 0 || description.value.length === 0){
     // Primero comprobamos que ningún campo del input esté vacío y lanzamos el error con un timeout para informar al user.
 
     showErrorMessage.value = true;
-    errorMessage.value = 'The task title or description is empty';
+    errorMessage.value = 'The Task title or description is empty!';
     setTimeout(() => {
     showErrorMessage.value = false;
     }, 5000);

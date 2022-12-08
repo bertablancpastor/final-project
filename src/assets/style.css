@@ -20,6 +20,12 @@
     padding: 0;
 }
 
+#app{
+  background-color: #E9C46A;
+  min-height: 100vh;
+  margin-bottom: 3rem;
+}
+
 .container-sign{
     position: relative;
     display: flex;
@@ -100,7 +106,7 @@
 }
 
 .button:hover{
-    background-color: #264653bb; 
+    background-color: #2a9d8f; 
 }
 
 .create-account{
@@ -124,9 +130,8 @@ nav {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: #E9C46A;
-
-  }
+    background-color: #264653;
+   }
   
   nav ul {
     display: flex;
@@ -134,7 +139,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    padding: 10px;    
+    padding: 10px;
   }
 
   nav ul li {
@@ -145,24 +150,43 @@ nav {
   .router-link {
     text-decoration: none;
     font-size: small;
-    color: #264653;
+    color: #fafafa;
     font-weight: bold;
   }
 
-  .router-link :hover{
-    color:#264653bb;
+  .router-link:hover{
+    color: #2a9d8f;;
   }
 
   .log-out-welcome{
     font-size: small;
     font-weight: bold;
+    color: #fafafa;
+  }
+
+  .button-log-out{
+    padding: 10px 40px;
+    border-radius: 3px;
+    font-size: 12px; 
+    width: 100%;
+    background-color: #fafafa;
+    border: none;
+    font-weight: 800;
     color: #264653;
+    cursor: pointer;
+  }
+
+  .button-log-out:hover{
+    background-color:#2a9d8f;
+    color: #fafafa;
   }
 
   /* NewTask Component*/
 
   .new-task{
-    background-color: #e9c56ab4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .title-new-task{
     text-align: center;
@@ -171,34 +195,248 @@ nav {
     margin-bottom: 10px;
   }
 
+  .new-task-fields{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .input-field-new-task{
     border-radius: 3px;
-    border: 1px solid #264653ff;
-    padding: 10px 100px;
+    padding: 10px 200px;
     font-size: 12px; 
     border:none;
     text-align: center;
   }
 
-  .button-new-task{
-    padding: 10px 100px;
+  .button-add-task{
+    padding: 10px 200px;
     border-radius: 3px;
     font-size: 12px; 
-    width: 100%;
     margin-bottom: 20px;
     background-color: #264653;
     border: none;
     font-weight: 800;
     color: #fafafa;
     cursor: pointer;
+    text-align: center;
+  }
+
+  .button-add-task:hover{
+    background-color:#2a9d8f;
+  }
+
+  .error-text{
+    font-size: 12px;
+    color: #E76F51;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  /* TaskItem Component*/
+
+  .task-item{
+    padding: 40px;
+    align-items: center;
   }
 
   
+  .container-task-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
+  }
 
+  .task-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fafafa;
+    padding: 10px 20px;
+    border-radius: 22px;
+    /* margin-top: 40px; */
+    width: 350px;    
+  }
+
+  .task-item:hover{
+    /* background-color: #E9C46A; */
+    box-shadow: 1px 1px 3px 3px #264653bb;
+    cursor: pointer;
+  }
+
+   .completed {
+    text-decoration: line-through;
+    text-align: left;
+    color: #264653bb;
+    margin: 10px;
+  } 
+  
+  .not-completed {
+    color: #264653;
+    text-align: left;
+    margin: 10px;
+}
+
+  .buttons-task-item{
+    display: flex;
+    flex-direction: row; 
+  }
+
+  .buttons{
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 12px; 
+    margin-bottom: 20px;
+    margin: 10px;
+    background-color: #264653;
+    border: none;
+    font-weight: 800;
+    color: #fafafa;
+    cursor: pointer;
+    text-align: center;
+  }
+
+   .edit-task{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-edit{
+    border-radius: 3px;
+    padding: 10px 50px;
+    margin: 4px;
+    font-size: 12px; 
+    border: 2px #264653bb;
+    background-color: #26465340;
+    text-align: center;
+  }
+
+  button{
+    cursor: pointer;
+  }
+
+  .buttons-1{
+    background-image: url(/buttons/delete.svg);
+    width: 3px;
+    height: 3px;
+    background-position: center;
+    border: none;
+    margin: 10px;
+    padding: 30px;
+    background-color: #E9C46A;
+    border-radius: 150px;
+    background-repeat: no-repeat;
+    background-size: 15px;  
+  }
+
+  .buttons-1:hover{
+    background-color: #2a9d8f;
+  }
+
+  .buttons-2{
+    background-image: url(/buttons/edit.svg);
+    width: 4px;
+    height: 4px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin: 10px;
+    padding: 30px;
+    background-color: #E9C46A;
+    border-radius: 150px;
+    background-repeat: no-repeat;
+    background-size: 20px;      
+  }
+
+  .buttons-2:hover{
+    background-color: #2a9d8f;
+  }
+
+  .buttons-3{
+    background-image: url(/buttons/check.svg);
+    background-size: cover;
+    background-position: center;
+    border: none;
+    margin: 10px;
+    padding: 30px;
+    background-color: #E9C46A;
+    border-radius: 150px;
+    background-repeat: no-repeat;
+    background-size: 25px;     
+  }
+
+  .buttons-3:hover{
+    background-color: #2a9d8f;
+  }
+
+  .button-change{
+    border-radius: 3px;
+    padding: 10px 50px;
+    margin: 4px;
+    margin-bottom: 10px;
+    font-size: 12px; 
+    border: 2px #264653bb;
+    background-color: #264653;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 800;
+    color:white;
+  }
+
+  .button-change:hover{
+    background-color: #2a9d8f;
+  }
+
+  .footer{
+    text-align: center;
+    /* margin: 20px; */
+    font-size: 12px;
+    background-color: #E9C46A;
+    width: 100%;
+    /* height: 100%; */
+    padding: 20px 20px;
+    color: #264653;
+    position: fixed;
+    bottom: 0;
+  }
+
+  /*Account views*/
+
+  .account{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    color: #264653;
+  }
+
+  .account-user{
+    font-weight: 600;
+  }
+
+  img {
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 50%;
+  }
+
+
+  
   /*MediaQuerys*/
 
   @media(max-width:500px){
+  
+  /* .toogle{
+    background-image: url(/src/assets/images/hamburguer.png);
+  } */
 
+  .log-out-welcome{
+    display: none;
+  }
+/*  
   .hamburger{
     display: block;
   }
@@ -213,6 +451,27 @@ nav {
 
   .hamburger.active .bar:nth-child(3){
     transform: translateY(-8px) rotate(-45deg);
+  } */
+
+  /* .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: red;
+  } */
+
+  .title-new-task{
+    font-size: 25px;
   }
 
+  .input-field-new-task{
+    padding: 10px 50px;  
+  }
+
+  .button-add-task{
+    padding: 10px 120px;
+  }  
+
+  
 }

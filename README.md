@@ -41,43 +41,42 @@ Para este proyecto vamos a desarrollar una aplicación ToDo (para hacer un segui
 ## Seguimiento del proyecto:
 # [Mi Trello] (https://trello.com/b/NkJzfJXW/final-project)
 ### 05/12/2022:
+* Preparar el README con la descripcion del proyecto
 * Leer toda la documentación y entender-la
-* Implentar HTML y CSS del Sign Up y Sing In
+* Entender la logica que se debe aplicar
 
 ### 06/12/2022:
-* Implentar HTML y CSS del Sign Up y Sing In
 * Implentar la logica para el Sign Up, Sign In y Sing Out
-* Implentar los componentes del Navbar y el Footer
-* Empezar con el diseño HTML y CSS del componente addTask
+* Añadir funcionalidad al boton toggle que permite cambiar el estado de la tarea
+* Añadir funcionalidad al boton de cambiar el nombre que permite al usuario cambiar el titulo de la tarea
+* Hacer el fetch de las tareas de Supabase al cargar la pagina y cada vez que se ejecute alguna accion de cambio
+* Preparar la tienda task.js para poder conectar los botones con la base de datos
 
 ### 07/12/2022:
 * Implementar la funcionalidad de addTask y taskItem
+* Añadir funcionalidad al boton de borrar la tarea
+* Implentar HTML y CSS del Sign Up y Sing In
 * Añadir el diseño HTML y CSS del componente taskItem
-* Hacer el fetch de las tareas de Supabase al cargar la pagina y cada vez que se ejecute alguna accion de cambio
+* Empezar con el diseño HTML y CSS del componente addTask
+* Cuando el usuario clique en el boton de toggle y cambie el estado de la tarea a "Hecha", esta se tacha
+* Subir el proyecto a Vercel para que este disponible para todo el mundo
 
 ### 08/12/2022:
-* EMPEZAR POR EL BUTTON DE ADD de NewTask.vue Componente!!!!
-
-* Preparar la tienda task.js para poder conectar los botones con la base de datos
-* Añadir funcionalidad al boton toggle que permite cambiar el estado de la tarea
-* Añadir funcionalidad al boton de cambiar el nombre que permite al usuario cambiar el titulo de la tarea
-* Añadir funcionalidad al boton de borrar la tarea
-* Implemntar la funcionalidad de ocultar/mostrar contraseña a la hora de hacer Sign In
+* Seguir con el diseño del CSS de los componentes taskItem y addTask
+* Implentar los componentes del Footer
 * Adaptar el diseño a la version movil, en este caso solo hay solo media query que se activa a partir de 747px para abajo
 
 ### 09/12/2022:
 * Implementar menu hamburguesa para versiones moviles
-* Cuando el usuario clique en el boton de toggle y cambie el estado de la tarea a "Hecha", esta se tacha
-* Subir el proyecto a Vercel para que este disponible para todo el mundo
-* Comenzar con la parte del perfil de usuario ~~(opcional)~~
 
 ### 12/12/2022:
-* Repaso a la pagina y todas sus funcionalidades
-* Preparar el README con la descripcion del proyecto
-* Preparar la presentacion del proyecto
-* Implementar funcionalidad del Timer
-
+* ACABAR ELS PENDENTS DEL DIVENDRES 09/12/2022
 ### 13/12/2022:
+* Implemntar la funcionalidad de ocultar/mostrar contraseña a la hora de hacer Sign In
+* Implementar funcionalidad del Timer
+* Comenzar con la parte del perfil de usuario ~~(opcional)~~
 ### 14/12/2022:
 ### 15/12/2022:
+* Repaso a la pagina y todas sus funcionalidades
 ### 16/12/2022:
+* Preparar la presentacion del proyecto

@@ -1,7 +1,15 @@
 <template>
   <Nav />
-  <h1>Name: {{username}}</h1>
-  <img :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture">
+
+<div class="account">
+  <h1>Your Account</h1>
+  <p v-if="useUserStore().user" class="account-user" >{{useUserStore().user.email}}</p>
+  <!-- <img :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture"> -->
+
+  <img src="../assets/images/final-project.png" alt="Profile picture">
+</div>
+
+  <Footer />
 </template>
 
 <script setup>
@@ -9,6 +17,7 @@
   import { onMounted, ref, toRefs } from 'vue'
   import { useUserStore } from "../stores/user";
   import Nav from '../components/Nav.vue';
+  import Footer from '../components/Footer.vue';
 
   const userStore = useUserStore();
 
@@ -41,8 +50,5 @@
 </script>
 
 <style scoped>
-img {
-  width: 200px;
-  border-radius: 50%;
-}
+
 </style>

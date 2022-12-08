@@ -21,16 +21,15 @@
           <p v-if="useUserStore().user">Welcome {{useUserStore().user.email}}</p>
         </li>
         <li>
-          <button @click="signOut" class="button">Log out</button>
+          <button @click="signOut" class="button-log-out">Log out</button>
         </li>
       </ul>
     </div>
 
-    <!-- <div class = "hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div> -->
+    <!-- Aplication hamburguer -->
+    <!-- <button @click="toogle" class="toggle"></button>
+      <div v-show="changeBoolean" class="hamburger"></div> -->
+  
 
   </nav>
 </template>
@@ -60,7 +59,6 @@ const signOut = async () => {
   try{
     await useUserStore().signOut();
     redirect.push({path: "/auth/login"});
-
     // call the user store and send the users info to backend to signOut
     // then redirect user to the homeView
   } catch (error) {
@@ -70,9 +68,13 @@ const signOut = async () => {
       }, 5000);
   }
   return;
-
   errorMsg.value = "error";
+};
 
+//Logica para el Hamburguer
+const changeBoolean = ref (false);
+const toogle = () => {
+  changeBoolean.value = !changeBoolean.value;
 };
 
 </script>
