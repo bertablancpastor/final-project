@@ -4,9 +4,9 @@
 <div class="account">
   <h1>Your Account</h1>
   <p v-if="useUserStore().user" class="account-user" >{{useUserStore().user.email}}</p>
-  <!-- <img :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture"> -->
+  <img :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture">
 
-  <img src="../assets/images/final-project.png" alt="Profile picture">
+  <!-- <img src="./public" alt="Profile picture"> -->
 </div>
 
   <Footer />

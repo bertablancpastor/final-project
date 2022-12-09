@@ -4,7 +4,7 @@
     <!-- <router-link to="/">
       Home
     </router-link> -->
-    <ul>
+    <ul class="nav-desktop">
         <li>
           <router-link to="/" class="router-link">Task Manager</router-link>
         </li>
@@ -16,8 +16,8 @@
 
     <div>
       <ul>
-        <!-- Aplicar como aplicar el usuario logeado -->
-        <li class="log-out-welcome">
+                <li class="log-out-welcome">
+          <!-- Aplicación del usuario logeado -->
           <p v-if="useUserStore().user">Welcome {{useUserStore().user.email}}</p>
         </li>
         <li>
@@ -27,8 +27,21 @@
     </div>
 
     <!-- Aplication hamburguer -->
-    <!-- <button @click="toogle" class="toggle"></button>
-      <div v-show="changeBoolean" class="hamburger"></div> -->
+    <button @click="toggle" class="toggle"> </button>
+      <div v-show="changeBoolean" class="hamburger">
+        <ul>
+        <li>
+          <router-link to="/" class="router-link-mobile">Task Manager</router-link>
+        </li>
+
+        <li>
+          <router-link to="/account" class="router-link-mobile">Your Account</router-link>
+        </li>
+        <li>
+          <button @click="signOut" class="button-log-out-mobile">Log out</button>
+        </li>
+        </ul>
+      </div>
   
 
   </nav>
@@ -72,8 +85,8 @@ const signOut = async () => {
 };
 
 //Logica para el Hamburguer
-const changeBoolean = ref (false);
-const toogle = () => {
+const changeBoolean = ref (true);
+const toggle = () => {
   changeBoolean.value = !changeBoolean.value;
 };
 

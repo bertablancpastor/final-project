@@ -1,26 +1,18 @@
-# [](https://github.com/zantonz/final-project/blob/master/README.md)ToDo App
 
-[Click para acceder a la web](https://todo-zantonz.vercel.app/)
+# **ToDo App**
 
-Autor: Anton Zyrianov
-Fecha: 25/08/2022
+[Click para acceder a la web](https://final-project-glgj6lj0j-bertablancpastor.vercel.app/auth/login)
 
 ## Descripcion
 
-![Pagina Home](https://i.postimg.cc/m2rV83dV/Captura-de-pantalla-2022-08-25-a-las-10-38-46.png)
+![Pagina Home](/public/buttons/Captura.PNG)
 
-Se trata del proyecto final realizado durante el bootcamp de Front End Development en el Ironhack que consiste en una pagina web que te permite gestionar tus tareas.
+Aquí os presento el proyecto final del bootcamp Front End Development de Ironhack. Consiste en crear una pagina web de ToDo's.
 
-Es una aplicacion creada con Vue.js que permite a usuarios crear una cuenta, añadir tareas a completar, editarlas, marcarlas como completadas y finalmente borrarlas. Nuestra pagina web esta vinculada a una base de datos, donde estaremos almacenando todos los datos de usuarios y las tareas. En este caso, para gestionarlo utilizaremos Supabase, que nos ofrece un subconjunto de funcionalidades de Back End que nos permite gestionarlo como un servicio.
-
-__El objetivo__ de este proyecto es poner en practica los conocimientos de Vue.js obtenidos durante el curos y ademas poder conectarlo a una base de datos externa y gestionarla.
-
-## Tecnologias empleadas:
-
-* __Client:__ Vue.js y Vite
-* __Router:__ Vue Router
-* __Store:__ Pinia y Pinia Persist para el Log In
-* __Database:__ Supabase
+Es una aplicacion hecha con el framework de JavaScript Vue.js. La pàgina permite crear-te una cuenta, loguearte y desloguearte.
+Una vez dentro de la pàgina pues añadir tareas con un titulo y una descripción. Una vez la tarea esta creada se puede editar, marcar como completada o eliminar. 
+La pagina esta conectada a Supabase, una aplicación web que te hace las funcionalidades de Back End, creandote la base de datos.
+Toda la pagina tiene la version responsive aplciada para mobile  y para desktop.
 
 ## Requisitos:
 
@@ -39,7 +31,8 @@ Para este proyecto vamos a desarrollar una aplicación ToDo (para hacer un segui
 * Usaréis un trello para seguir el progreso de vuestro proyecto.
 
 ## Seguimiento del proyecto:
-# [Mi Trello] (https://trello.com/b/NkJzfJXW/final-project)
+## [Mi Trello](https://trello.com/b/NkJzfJXW/final-project)
+
 ### 05/12/2022:
 * Preparar el README con la descripcion del proyecto
 * Leer toda la documentación y entender-la
@@ -47,32 +40,37 @@ Para este proyecto vamos a desarrollar una aplicación ToDo (para hacer un segui
 
 ### 06/12/2022:
 * Implentar la logica para el Sign Up, Sign In y Sing Out
-* Añadir funcionalidad al boton toggle que permite cambiar el estado de la tarea
-* Añadir funcionalidad al boton de cambiar el nombre que permite al usuario cambiar el titulo de la tarea
-* Hacer el fetch de las tareas de Supabase al cargar la pagina y cada vez que se ejecute alguna accion de cambio
 * Preparar la tienda task.js para poder conectar los botones con la base de datos
+* Implementar la funcionalidad de addTask 
+* Hacer el fetch de las tareas de Supabase al cargar la pagina y cada vez que se ejecute alguna accion de cambio
 
 ### 07/12/2022:
-* Implementar la funcionalidad de addTask y taskItem
+* Implementar la funcionalidad de taskItem
+* Añadir funcionalidad al boton toggle que permite cambiar el estado de la tarea
+* Cuando el usuario clique en el boton de toggle y cambie el estado de la tarea a "Hecha", esta se tacha
+* Añadir funcionalidad al boton de cambiar el nombre que permite al usuario cambiar el titulo de la tarea
 * Añadir funcionalidad al boton de borrar la tarea
 * Implentar HTML y CSS del Sign Up y Sing In
 * Añadir el diseño HTML y CSS del componente taskItem
 * Empezar con el diseño HTML y CSS del componente addTask
-* Cuando el usuario clique en el boton de toggle y cambie el estado de la tarea a "Hecha", esta se tacha
 * Subir el proyecto a Vercel para que este disponible para todo el mundo
 
 ### 08/12/2022:
 * Seguir con el diseño del CSS de los componentes taskItem y addTask
 * Implentar los componentes del Footer
+* Añadir el diseño HTML y CSS del componente Footer
+* Añadir el diseño HTML y CSS del view Account
+* Modificar el fav icon
 * Adaptar el diseño a la version movil, en este caso solo hay solo media query que se activa a partir de 747px para abajo
 
 ### 09/12/2022:
 * Implementar menu hamburguesa para versiones moviles
+* Implemntar la funcionalidad de ocultar/mostrar contraseña en el Sign In
+* Implementar ordenar tarea segun si estan finalizadas o no. Las finalizadas se colocaran al final
 
 ### 12/12/2022:
 * ACABAR ELS PENDENTS DEL DIVENDRES 09/12/2022
 ### 13/12/2022:
-* Implemntar la funcionalidad de ocultar/mostrar contraseña a la hora de hacer Sign In
 * Implementar funcionalidad del Timer
 * Comenzar con la parte del perfil de usuario ~~(opcional)~~
 ### 14/12/2022:

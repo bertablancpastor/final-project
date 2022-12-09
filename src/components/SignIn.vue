@@ -8,16 +8,16 @@
   
   <div class="form-side">
     <div class="header-description">
-      <h3 class="header-title">Log In to ToDo App</h3>
+      <h3 class="header-title">Log In to ToDo</h3>
       <p class="header-subtitle">Start organizing your tasks!</p>
     </div>
 
     
     <form @submit.prevent="signIn" class="form-sign-in">
-      <div class="form">
-        <div class="form-input-sign-in">
+      <div>
+        <div>
           <label class="input-field-label">E-mail</label>
-          <input
+          <input 
             type="email"
             class="input-field"
             placeholder="example@gmail.com"
@@ -26,18 +26,22 @@
             required
           />
         </div>
-        <div class="form-input">
+
+        
+        <div class="show-password">
           <label class="input-field-label">Password</label>
+          <!-- Versió sense mostra contrasenya  -->
           <input
-            type="password"
+            :type="passwordFieldType" 
             class="input-field"
             placeholder="**********"
             id="password"
             v-model="password"
             required
           />
-         </div>
-
+          <button :class="showIcon" @click.prevent="hidePassword = !hidePassword" ></button>
+        </div>
+                        
         <button class="button" type="submit">Sign In</button> 
       </div> 
 
@@ -72,6 +76,17 @@ const password = ref("");
 // Error Message
 const errorMsg = ref("");
 
+//Show hide password variables Diego
+const hidePassword = ref(true);
+const passwordFieldType = computed(() =>
+  hidePassword.value ? "password" : "text"
+);
+
+const showIcon = computed(() =>
+  hidePassword.value ? "passwordFieldIcon" : "passwordFieldIconShow"
+);
+
+
 // Router to push user once Log In to home
 const redirect = useRouter();
 
@@ -92,4 +107,7 @@ errorMsg.value = "error";
 };
 </script>
 
-<style></style>
+<style scoped>
+
+
+</style>

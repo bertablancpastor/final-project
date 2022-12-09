@@ -38,6 +38,9 @@ const tasks = ref([]);
 const getTasks = async() => {
   console.log(tasks.value);
   tasks.value = await taskStore.fetchTasks();
+//Aplicar method .sort para ordenar las tareas en función de si estan completadas
+  tasks.value = tasks.value.sort((a, b) => (a.is_complete ? 1 : -1));
+  console.log(getTasks);
 };
 
 // Tiene que entrar en la función de la store task.js y despues llamar a getTasks

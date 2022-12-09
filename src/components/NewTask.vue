@@ -10,9 +10,9 @@
             <input type="text" placeholder="Add a Task Title..." class="input-field-new-task" v-model="name">
         </div>
         <div class="input-field-new-task">
-            <input type="text" placeholder="Add a Task Description..." class="input-field-new-task" v-model="description">
+            <textarea type="text" placeholder="Add a Task Description..." class="input-field-new-task" v-model="description"></textarea>
         </div>
-        <button class="button-add-task" @click="addTask" >Add</button>
+        <button class="button-add-task" @click="addTask">Add</button>
     </div>
 
 </div>

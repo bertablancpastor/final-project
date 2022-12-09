@@ -1,6 +1,6 @@
 <template>
 
-    <h4 class="footer">Ironhack | 07NOV - 16DEC 2022 </h4>
+    <h4 class="footer">&copy; Bootcamp Frontend Ironhack | 07NOV - 16DEC 2022 </h4>
   
 </template>
 
