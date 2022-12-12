@@ -3,7 +3,7 @@ import { supabase } from "../supabase";
 export const useUserStore = defineStore("user", {
   state: () => ({
     user: null,
-    profile: null
+    profile: null,
   }),
   actions: {
     async fetchUser() {
@@ -14,10 +14,9 @@ export const useUserStore = defineStore("user", {
         .from('profiles')
         .select()
         .match({ user_id: this.user.id })
-
         if (profile) this.profile = profile[0];
-        console.log('user in store: ', this.user);
-        console.log('profile in store: ', this.profile);
+        //console.log('user in store: ', this.user);
+        //console.log('profile in store: ', this.profile);
       }
     },
 
@@ -29,7 +28,7 @@ export const useUserStore = defineStore("user", {
       if (error) throw error;
       if (user) {
         this.user = user;
-        console.log(this.user);
+        //console.log(this.user);
 
         const { data: profile } = await supabase.from('profiles').insert([
           {

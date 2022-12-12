@@ -85,7 +85,7 @@ const signOut = async () => {
 };
 
 //Logica para el Hamburguer
-const changeBoolean = ref (true);
+const changeBoolean = ref (false);
 const toggle = () => {
   changeBoolean.value = !changeBoolean.value;
 };

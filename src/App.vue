@@ -5,15 +5,22 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import { storeToRefs } from "pinia";
 import { useRouter } from "vue-router";
 import { useUserStore } from "./stores/user.js";
-import { ref } from "vue";
+
+// Update profile
+import { supabase } from "./supabase";
+import Account from "./views/Account.vue";
+import Auth from "./views/Auth.vue";
 
 const router = useRouter();
 const userStore = useUserStore();
 const { user } = storeToRefs(userStore);
+
+// Update profile
+const session = ref();
 
 onMounted(async () => {
   const appReady = ref(null);
@@ -26,6 +33,12 @@ onMounted(async () => {
     } else {
       // continue to dashboard
       // router.push({ path: "/" });
+      // supabase.auth.getSessionFromUrl().then(({ data }) => {
+      //   session.value = data.session;
+      // });
+      // supabase.auth.onAuthStateChange((_, _session) => {
+      //   session.value = _session;
+      // });
     }
   } catch (e) {
     console.log(e);
@@ -33,6 +46,4 @@ onMounted(async () => {
 });
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -12,7 +12,6 @@
     color: var(--colorRed);
 } */
 
-/* SignIn - SignUp - SignOut Component */
 *{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
@@ -25,6 +24,8 @@
   min-height: 100vh;
   /* margin-bottom: 0rem; */
 }
+
+/* SignIn - SignUp - SignOut Component */
 
 .container-sign{
     position: relative;
@@ -155,9 +156,6 @@
   right: 5px; 
 }
 
-/* Home view */
-
-
 
 /* Nav component */
 nav {
@@ -240,10 +238,9 @@ nav {
   .input-field-new-task{
     border-radius: 3px;
     padding: 10px 200px;
-    /* width: ; */
     font-size: 12px; 
     border:none;
-    text-align: center;
+    text-align: left;
   }
 
   .button-add-task{
@@ -427,7 +424,7 @@ nav {
   .button-change:hover{
     background-color: #2a9d8f;
   }
-  /*Footer*/
+  /*Footer component*/
   .footer{
     text-align: center;
     /* margin: 20px; */
@@ -457,8 +454,12 @@ nav {
 
   img {
     margin-top: 20px;
-    width: 200px;
-    border-radius: 50%;
+    width: 150px;
+    /* border-radius: 50%;     */
+  }
+
+  .form-widget{
+    margin-top: 10px;
   }
 
     
