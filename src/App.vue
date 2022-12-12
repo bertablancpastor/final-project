@@ -15,9 +15,6 @@ const router = useRouter();
 const userStore = useUserStore();
 const { user } = storeToRefs(userStore);
 
-// Update profile
-const session = ref();
-
 onMounted(async () => {
   const appReady = ref(null);
   try {
@@ -26,15 +23,6 @@ onMounted(async () => {
       // redirect them to logout if the user is not there
       appReady.value = true;
       router.push({ path: "/auth/login" });
-    } else {
-      // continue to dashboard
-      // router.push({ path: "/" });
-      // supabase.auth.getSessionFromUrl().then(({ data }) => {
-      //   session.value = data.session;
-      // });
-      // supabase.auth.onAuthStateChange((_, _session) => {
-      //   session.value = _session;
-      // });
     }
   } catch (e) {
     console.log(e);

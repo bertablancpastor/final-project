@@ -33,8 +33,8 @@ const taskStore = useTaskStore();
 const emit = defineEmits(['getTasksHijo']);
 
 // variables para los valors de los inputs
-const name = ref('');
-const description = ref('');
+const name = ref(props.task.title);
+const description = ref(props.task.description);
 
 const props = defineProps({
     task: Object,

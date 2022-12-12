@@ -4,13 +4,14 @@
 <div class="account">
   <h1>Your Account</h1>
   <p v-if="useUserStore().user" class="account-user" >{{useUserStore().user.email}}</p>
+  
   <!-- <img :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture"> -->
 
-  <div>
-    <img src="/buttons/noun-user-154044-svg.svg" alt="Profile picture">
+  <div class="account-update" >
+    <img  src="/buttons/noun-user-154044-svg.svg" alt="Profile picture">
     <!-- Upload iamge -->
     <form class="form-widget" @submit.prevent="updateProfile">
-    <!-- <Avatar v-model:path="avatar_url" @upload="updateProfile" size="10" /> -->
+  
     <!-- Username -->
     <div>
       <label for="username">Name</label>
@@ -28,7 +29,7 @@
     <div>
       <input
         type="submit"
-        class="button primary block"
+        class="button-primary-block"
         :value="loading ? 'Loading ...' : 'Update'"
         :disabled="loading"
       />
@@ -36,14 +37,7 @@
 
     </form>
 
-     <!-- Update profile -->
-  <!-- <div class="container" style="padding: 50px 0 100px 0">
-    <Account v-if="session" :session="session" />
-    <Auth v-else />
-  </div> -->
-
-    
-    
+       
   </div>
 
 
@@ -74,9 +68,9 @@
 
   async function getProfile() {
     await userStore.fetchUser();
-    console.log(userStore.profile);
+    // console.log(userStore.profile);
     username.value = userStore.profile.username;
-    avatar_url.value = userStore.user.avatar_url;
+    
   }
 
   async function signOut() {
