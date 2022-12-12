@@ -10,10 +10,6 @@ import { storeToRefs } from "pinia";
 import { useRouter } from "vue-router";
 import { useUserStore } from "./stores/user.js";
 
-// Update profile
-import { supabase } from "./supabase";
-import Account from "./views/Account.vue";
-import Auth from "./views/Auth.vue";
 
 const router = useRouter();
 const userStore = useUserStore();

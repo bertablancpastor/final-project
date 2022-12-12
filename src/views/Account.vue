@@ -58,7 +58,7 @@
   import { useUserStore } from "../stores/user";
   import Nav from '../components/Nav.vue';
   import Footer from '../components/Footer.vue';
-  import Avatar from '../components/Avatar.vue';
+ 
 
   const userStore = useUserStore();
 
