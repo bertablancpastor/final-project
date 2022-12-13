@@ -6,9 +6,9 @@
        <p v-bind:class="task.is_complete ? 'completed' : 'not-completed'">{{task.description}}</p>
     
      <div class="buttons-task-item">
-       <button @click="deleteTask" class="buttons-1"></button>
-       <button @click="editTaskFunction" class="buttons-2"></button>   
-       <button @click="statusTask" class="buttons-3"></button>
+       <button @click="deleteTask" class="buttons-1" title="Delete"></button>
+       <button @click="editTaskFunction" class="buttons-2" title="Edit"></button>   
+       <button @click="statusTask" class="buttons-3" title="Done"></button>
      </div>
 
      <div v-show="editTask" class="edit-task">

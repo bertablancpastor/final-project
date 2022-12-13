@@ -1,16 +1,9 @@
-/* :root {
-    --colorWhite: #ffffff;
-    --colorBlack: #000000;
-    --colorRed: red;
-    --fontSize-sm: 16px;
-    --fontFamily: 'Arial, Helvetica, sans-serif';
-    --fontTitle: 'Arial';
-    --fontBody: 'Helvetica';
-} */
+:root {
+    --colorYellow: #E9C46A;
+    --colorGreen: #264653;
+    --colorHover: #2a9d8f;
+}
 
-/* h1 {
-    color: var(--colorRed);
-} */
 
 *{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -20,7 +13,7 @@
 }
 
 #app{
-  background-color: #E9C46A;
+  background-color: var(--colorYellow);
   min-height: 100vh;
   /* margin-bottom: 0rem; */
 }
@@ -33,7 +26,7 @@
     justify-content: center;
     align-items: center; 
     text-align: center;
-    background-color: #E9C46A; 
+    background-color: var(--colorYellow); 
     width: 100vw;
     height:100vh;
     border: 0px solid #264653ff;
@@ -59,7 +52,7 @@
     margin-block-start: 1em;
     margin-inline-end: 0px;
     margin-inline-start: 0px;
-    color: #264653    
+    color: var(--colorGreen);    
 }
 
 .header-subtitle {
@@ -85,7 +78,7 @@
 .input-field{
     border-radius: 3px;
     border: 1px solid #264653ff;
-    color: #264653;
+    color: var(--colorGreen);
     margin-bottom: 20px;
     padding: 10px 12px;
     font-size: 12px; 
@@ -100,7 +93,7 @@
     font-size: 12px; 
     width: 100%;
     margin-bottom: 20px;
-    background-color: #264653;
+    background-color: var(--colorGreen);
     border: none;
     font-weight: 800;
     color: #fafafa;
@@ -109,12 +102,12 @@
 }
 
 .button:hover{
-    background-color: #2a9d8f; 
+    background-color: var(--colorHover); 
 }
 
 .create-account{
     font-size: 12px;
-    color: #264653;
+    color: var(--colorGreen);
     font-weight: 600;
 }
 
@@ -164,7 +157,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: #264653;
+    background-color: var(--colorGreen);
    }
   
   nav ul {
@@ -189,7 +182,7 @@ nav {
   }
 
   .router-link:hover{
-    color: #2a9d8f;;
+    color: var(--colorHover);;
   }
 
   .log-out-welcome{
@@ -206,12 +199,12 @@ nav {
     background-color: #fafafa;
     border: none;
     font-weight: 800;
-    color: #264653;
+    color: var(--colorGreen);
     cursor: pointer;
   }
 
   .button-log-out:hover{
-    background-color:#2a9d8f;
+    background-color:var(--colorHover);
     color: #fafafa;
   }
 
@@ -225,7 +218,7 @@ nav {
   .title-new-task{
     text-align: center;
     padding-top: 40px;
-    color: #264653;
+    color: var(--colorGreen);
     margin-bottom: 10px;
   }
 
@@ -248,7 +241,7 @@ nav {
     border-radius: 3px;
     font-size: 12px; 
     margin-bottom: 20px;
-    background-color: #264653;
+    background-color: var(--colorGreen);
     border: none;
     font-weight: 800;
     color: #fafafa;
@@ -257,7 +250,7 @@ nav {
   }
 
   .button-add-task:hover{
-    background-color:#2a9d8f;
+    background-color:var(--colorHover);
   }
 
   .error-text{
@@ -289,17 +282,20 @@ nav {
     display: flex;
     flex-direction: column;
     text-align: center;
+    /* background-color: var(--colorYellow); */
     background-color: #fafafa;
     padding: 10px 20px;
     border-radius: 22px;
+    border: 2px solid #fafafa;
     /* margin-top: 40px; */
     width: 350px;    
   }
 
   .task-item:hover{
-    /* background-color: #E9C46A; */
+    /* background-color: var(--colorYellow); */
     box-shadow: 1px 1px 3px 3px #264653bb;
     cursor: pointer;
+    border: none;
   }
 
    .completed {
@@ -310,7 +306,7 @@ nav {
   } 
   
   .not-completed {
-    color: #264653;
+    color: var(--colorGreen);
     text-align: left;
     margin: 10px;
 }
@@ -326,7 +322,7 @@ nav {
     font-size: 12px; 
     margin-bottom: 20px;
     margin: 10px;
-    background-color: #264653;
+    background-color: var(--colorGreen);
     border: none;
     font-weight: 800;
     color: #fafafa;
@@ -361,14 +357,14 @@ nav {
     border: none;
     margin: 10px;
     padding: 30px;
-    background-color: #E9C46A;
+    background-color: var(--colorYellow);
     border-radius: 150px;
     background-repeat: no-repeat;
     background-size: 15px;  
   }
 
   .buttons-1:hover{
-    background-color: #2a9d8f;
+    background-color: var(--colorHover);
   }
 
   .buttons-2{
@@ -380,14 +376,14 @@ nav {
     border: none;
     margin: 10px;
     padding: 30px;
-    background-color: #E9C46A;
+    background-color: var(--colorYellow);
     border-radius: 150px;
     background-repeat: no-repeat;
     background-size: 20px;      
   }
 
   .buttons-2:hover{
-    background-color: #2a9d8f;
+    background-color: var(--colorHover);
   }
 
   .buttons-3{
@@ -397,14 +393,14 @@ nav {
     border: none;
     margin: 10px;
     padding: 30px;
-    background-color: #E9C46A;
+    background-color: var(--colorYellow);
     border-radius: 150px;
     background-repeat: no-repeat;
     background-size: 25px;     
   }
 
   .buttons-3:hover{
-    background-color: #2a9d8f;
+    background-color: var(--colorHover);
   }
 
   .button-change{
@@ -414,7 +410,7 @@ nav {
     margin-bottom: 10px;
     font-size: 12px; 
     border: 2px #264653bb;
-    background-color: #264653;
+    background-color: var(--colorGreen);
     text-align: center;
     cursor: pointer;
     font-weight: 800;
@@ -422,18 +418,19 @@ nav {
   }
 
   .button-change:hover{
-    background-color: #2a9d8f;
+    background-color: var(--colorHover);
   }
-  /*Footer component*/
+
+   /*Footer component*/
   .footer{
     text-align: center;
     /* margin: 20px; */
     font-size: 12px;
-    background-color: #E9C46A;
+    background-color: var(--colorYellow);
     width: 100%;
     /* height: 100%; */
     padding: 20px 20px;
-    color: #264653;
+    color: var(--colorGreen);
     position: fixed;
     bottom: 0;
   }
@@ -445,33 +442,48 @@ nav {
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    color: #264653;
+    color: var(--colorGreen);
   }
 
   .account-user{
     font-weight: 600;
+    font-size: 33px ;
   }
 
     .account-update{
-    display: flex;
-    flex-direction: row;
     margin: 20px;
   }
 
-  img {
+  .avatar {
     width: 150px;
     height: 150px;
-    align-content: center;
+    border-radius: 50%;
+    margin-bottom: 12px;
+  
+  }
+
+  .avatar-upload{
+    margin: 20px;
+    position: center;
+  }
+
+  .user-update{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .form-widget{
     display: flex;
     flex-direction: column;
     padding: 20px;
+    align-items: center ;
   }
 
   label{
     font-weight: 800;
+    font-size: 14px;
   }
 
   #username, #usersurname, #email{
@@ -479,8 +491,9 @@ nav {
     padding: 4px;
     margin: 10px;
     background-color: #26465340;
-    color: #264653;
+    color: var(--colorGreen);
     font-weight: 600;
+    border-radius: 3px;
   }
   
 
@@ -488,15 +501,18 @@ nav {
     padding: 10px 50px;
     border-radius: 3px;
     font-size: 12px;
-    width: 100%;
+    width: 100%; 
     margin-bottom: 50px;
-    background-color: #264653;
+    background-color: var(--colorGreen);
     border: none;
     font-weight: 800;
     color: #fafafa;
     cursor: pointer;
-    align-items: center;
-  }
+    }
+
+    .button-primary-block:hover{
+      background-color: var(--colorHover);
+    }
   
 
  
@@ -568,7 +584,7 @@ nav {
   }
 
   .router-link-mobile:hover{
-    color: #2a9d8f;
+    color: var(--colorHover);
   }
 
   .button-log-out-mobile{
@@ -579,12 +595,12 @@ nav {
     background-color: #fafafa;
     border: none;
     font-weight: 600;
-    color: #264653;
+    color: var(--colorGreen);
     cursor: pointer;
   }
 
   .button-log-out-mobile:hover{
-    background-color: #2a9d8f;
+    background-color: var(--colorHover);
     color: #fafafa;
   }
 

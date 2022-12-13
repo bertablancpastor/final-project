@@ -3,39 +3,46 @@
 
 <div class="account">
   <h1>Your Account</h1>
-  <p v-if="useUserStore().user" class="account-user" >{{useUserStore().user.email}}</p>
+  <!-- <p v-if="useUserStore().user" class="account-user" >{{useUserStore().user.email}}</p> -->
+  <p class="account-user">{{username}}</p>
   
-  <!-- <img :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture"> -->
 
   <div class="account-update" >
     
-    <!-- <img  src="/buttons/noun-user-154044-svg.svg" alt="Profile picture"> -->
-    <!-- Upload iamge -->
+
+    
     <form class="form-widget" @submit.prevent="updateProfile">
 
-      <Avatar v-model:path="avatar_url" @upload="updateProfile" size="10" />
+    <!-- Upload image -->  
+    <div class="avatar-upload">
+      <Avatar v-model:path="avatar_url" @upload="updateProfile" class="avatar"/>
+    </div>  
   
-    <!-- Username -->
-    <div>
-      <label for="username">Name</label>
-      <input id="username" type="text" v-model="username" />
-    </div>
-    <div>
-      <label for="usersurname">Surname</label>
-      <input id="usersurname" type="text" v-model="usersurname" />
-    </div>
-    <div>
-      <label for="email">Email</label>
-      <input id="email" type="email" v-model="email" />
-    </div>
+    <!-- Update username, usersurname && email -->
+    <div class="user-update">
+        <div>
+          <label for="username">Name</label>
+          <input id="username" type="text" v-model.lazy="username" />
+        </div>
 
-    <div>
-      <input
+        <div>
+          <label for="usersurname">Surname</label>
+          <input id="usersurname" type="text" v-model="usersurname" />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" v-model="email" />
+        </div>
+
+        <div>
+        <input
         type="submit"
         class="button-primary-block"
         :value="loading ? 'Loading ...' : 'Update'"
         :disabled="loading"
-      />
+          />
+        </div>
     </div>
 
     </form>

@@ -19,7 +19,6 @@
             type="email"
             class="input-field"
             placeholder="example@gmail.com"
-            id="email"
             v-model="email"
             required
           />
