@@ -8,9 +8,12 @@
   <!-- <img :src="avatar_url ? avatar_url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png'" alt="Profile picture"> -->
 
   <div class="account-update" >
-    <img  src="/buttons/noun-user-154044-svg.svg" alt="Profile picture">
+    
+    <!-- <img  src="/buttons/noun-user-154044-svg.svg" alt="Profile picture"> -->
     <!-- Upload iamge -->
     <form class="form-widget" @submit.prevent="updateProfile">
+
+      <Avatar v-model:path="avatar_url" @upload="updateProfile" size="10" />
   
     <!-- Username -->
     <div>
@@ -52,6 +55,8 @@
   import { useUserStore } from "../stores/user";
   import Nav from '../components/Nav.vue';
   import Footer from '../components/Footer.vue';
+  import Avatar from '../components/Avatar.vue';
+
  
 
   const userStore = useUserStore();
@@ -70,6 +75,9 @@
     await userStore.fetchUser();
     // console.log(userStore.profile);
     username.value = userStore.profile.username;
+    usersurname.value = userStore.profile.usersurname;
+    email.value = userStore.profile.email;
+    avatar_url.value = userStore.profile.avatar_url;
     
   }
 
@@ -93,11 +101,11 @@
         username: username.value,
         usersurname: usersurname.value,
         email: email.value,
-        //avatar_url: avatar_url.value,
-        
-      }).match({user_id: useUserStore().user.id})
+        avatar_url: avatar_url.value,      
 
+      }).match({user_id: useUserStore().user.id})
       if (error) throw error
+     
     } catch (error) {
       alert(error.message)
     } finally {
@@ -105,9 +113,7 @@
     }
   } 
 
-
 </script>
 
 <style scoped>
-
 </style>
