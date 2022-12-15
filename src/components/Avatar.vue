@@ -58,16 +58,15 @@
       :src="src"
       alt="Avatar"
       class="avatar image"
-      :style="{ height: size + 'em', width: size + 'em' }"
+      
     />
-    <div v-else class="avatar no-image" :style="{ height: size + 'em', width: size + 'em' }" />
+    <div v-else class="avatar no-image"></div> 
 
-    <div :style="{ width: size + 'em' }">
-      <label class="button primary block" for="single">
+    <div>
+      <label class="button-primary-block" for="single">
         {{ uploading ? "Uploading ..." : "Upload" }}
       </label>
       <input
-        style="visibility: hidden; position: absolute"
         type="file"
         id="single"
         accept="image/*"
