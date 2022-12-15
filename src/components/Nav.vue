@@ -1,9 +1,6 @@
 <template>
   <nav>
-    <!-- <PersonalRouter :route="route" :buttonText="buttonText" class="logo-link"/> -->
-    <!-- <router-link to="/">
-      Home
-    </router-link> -->
+    
     <ul class="nav-desktop">
         <li>
           <router-link to="/" class="router-link">Task Manager</router-link>
@@ -93,9 +90,5 @@ const toggle = () => {
 </script>
 
 <style>
-/* .navbar-img {
-  width: 190px;
-} */
-
 
 </style>

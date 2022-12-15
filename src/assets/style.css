@@ -229,7 +229,6 @@ nav {
 
   .input-field-new-task{
     border-radius: 3px;
-    /* padding: 10px 200px; */
     height: 50px;
     width: 300px;
     margin: 10px;
@@ -239,7 +238,6 @@ nav {
   }
 
   .button-add-task{
-    /* padding: 10px 200px; */
     height: 40px;
     width: 100px;
     border-radius: 3px;
@@ -287,17 +285,14 @@ nav {
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* background-color: var(--colorYellow); */
     background-color: #fafafa;
     padding: 10px 20px;
     border-radius: 22px;
     border: 2px solid #fafafa;
-    /* margin-top: 40px; */
     width: 350px;    
   }
 
   .task-item:hover{
-    /* background-color: var(--colorYellow); */
     box-shadow: 1px 1px 3px 3px #264653bb;
     cursor: pointer;
     border: none;
@@ -429,11 +424,9 @@ nav {
    /*Footer component*/
   .footer{
     text-align: center;
-    /* margin: 20px; */
     font-size: 12px;
     background-color: var(--colorYellow);
     width: 100%;
-    /* height: 100%; */
     padding: 20px 20px;
     color: var(--colorGreen);
     position: fixed;
@@ -522,6 +515,7 @@ nav {
     #single{
       visibility: hidden;
       position:fixed;
+      width: auto;
     }
   
 
@@ -572,11 +566,6 @@ nav {
     font-size: 25px;
   }
 
-  .input-field-new-task{
-    /* padding: 10px 50px;   */
-    
-  }
-
   .button-add-task{
     padding: 10px 120px;
   }  
@@ -612,6 +601,5 @@ nav {
     background-color: var(--colorHover);
     color: #fafafa;
   }
-
   
 }

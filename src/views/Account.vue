@@ -3,7 +3,7 @@
 
 <div class="account">
   <h1>Your Account</h1>
-  <!-- <p v-if="useUserStore().user" class="account-user" >{{useUserStore().user.email}}</p> -->
+  
   <p class="account-user">{{username}}</p>
   
 
@@ -80,7 +80,7 @@
 
   async function getProfile() {
     await userStore.fetchUser();
-    // console.log(userStore.profile);
+  
     username.value = userStore.profile.username;
     usersurname.value = userStore.profile.usersurname;
     email.value = userStore.profile.email;

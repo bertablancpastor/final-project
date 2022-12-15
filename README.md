@@ -69,15 +69,18 @@ Para este proyecto vamos a desarrollar una aplicación ToDo (para hacer un segui
 * Implementar ordenar tarea segun si estan finalizadas o no. Las finalizadas se colocaran al final
 
 ### 12/12/2022:
-* Implementar perfil de usuario
+* Implementar perfil de usuario conectado con supabase
 
 ### 13/12/2022:
-* Implementar funcionalidad del Timer
+* Implementar perfil de usuario conectado con supabase
+* Implementar diseño HTML y CSS del Perfil de Usuario conectado a supabase
 
 ### 14/12/2022:
 
 ### 15/12/2022:
 * Repaso de la pagina y todas sus funcionalidades
+* Preparar la presentación del proyecto
 
 ### 16/12/2022:
 * Preparar la presentacion del proyecto
+* Presentación del proyecto

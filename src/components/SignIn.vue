@@ -2,10 +2,7 @@
  
 <template>
 <div class="container-sign">
-    <!-- <div>
-    <img src="https://img.freepik.com/foto-gratis/cerrar-mano-escribiendo-vista-superior-cuaderno_23-2148888824.jpg?w=996&t=st=1670258256~exp=1670258856~hmac=0ad8d76181e42c10b64ce2d0f461475aac684640d93513edae8049c3b69a937f" class="img-sign-in" alt="image">
-    </div> -->
-  
+     
   <div class="form-side">
     <div class="header-description">
       <h3 class="header-title">Log In to ToDo</h3>
