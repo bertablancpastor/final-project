@@ -15,7 +15,6 @@
 #app{
   background-color: var(--colorYellow);
   min-height: 100vh;
-  /* margin-bottom: 0rem; */
 }
 
 /* SignIn - SignUp - SignOut Component */
@@ -336,7 +335,7 @@ nav {
     text-align: center;
   }
 
-   .edit-task{
+  .edit-task{
     display: flex;
     flex-direction: column;
   }

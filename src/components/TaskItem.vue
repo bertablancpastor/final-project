@@ -61,7 +61,6 @@ const editTaskFunction = () => {
 };
 
 // Funcion archivar task
-
 const statusTask = async () => {
     await taskStore.statusTask(!props.task.is_complete, props.task.id);
     emit ('getTasksHijo');
